@@ -1,0 +1,239 @@
+$body-bg: #f5f5fb;
+$side-bg: #ffffff;
+$boxe-bg: #c4c4c4;
+$box-gap: 20px;
+$side-l-w: 200px;
+$side-r-w: 250px;
+* {
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: $body-bg;
+  display: flex;
+  .sidebar_left,
+  .sidebar_right {
+    background-color: $side-bg;
+    flex-direction: column;
+    display: flex;
+    gap: 2.5rem;
+  }
+  // sidebar sinistra
+  .sidebar_left {
+    width: $side-l-w;
+    padding: 2rem;
+
+    .element {
+      background-color: $boxe-bg;
+      width: 100%;
+      height: 1.5rem;
+    }
+
+    .sidebar_left-top {
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        width: 2rem;
+        height: 2rem;
+      }
+      .right {
+        width: 5rem;
+        height: 2rem;
+      }
+    }
+    .sidebar_left-center {
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .sidebar_left-bottom {
+      height: 50%;
+      display: flex;
+      align-items: flex-end;
+      .foot {
+        width: 100%;
+        height: 50%;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
+  // boxe centrale
+  .boxe {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    .element {
+      background-color: $boxe-bg;
+      width: 100%;
+      height: 1.5rem;
+    }
+
+    .boxe_top {
+      display: flex;
+      width: 100%;
+      gap: $box-gap;
+      justify-content: space-between;
+
+      .left {
+        width: 50%;
+        height: 2rem;
+        border-radius: 0.5rem;
+      }
+      .right {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    .boxe_top-center {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .left {
+        width: 20%;
+        height: 2rem;
+      }
+      .container_right {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        height: 2rem;
+        display: flex;
+        gap: 1rem;
+        .right {
+          height: 2rem;
+          width: 8rem;
+        }
+      }
+    }
+    .boxe_bottom-center {
+      width: 100%;
+      height: 40%;
+
+      .single {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+      }
+    }
+    .boxe_bottom {
+      display: flex;
+      gap: $box-gap;
+      justify-content: space-between;
+
+      width: 100%;
+      height: 40%;
+      .left,
+      .right {
+        width: 50%;
+        height: 100%;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
+  // sidebar destra
+  .sidebar_right {
+    width: $side-r-w;
+    display: flex;
+    justify-content: space-between;
+
+
+    padding: 2rem;
+    .element {
+      background-color: $boxe-bg;
+      height: 2.5rem;
+    }
+    .sidebar_right-top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .left {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+      }
+      .right {
+        width: 60%;
+      }
+    }
+    .sidebar_right-top-center {
+      width: 100%;
+
+      display: flex;
+      gap: $box-gap;
+      flex-direction: column;
+      .single {
+        width: 70%;
+      }
+      .container_element {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        gap: $box-gap;
+        .container_element_double {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .left {
+            width: 2rem;
+            height: 2rem;
+          }
+          .right {
+            width: 60%;
+            height: 2rem;
+          }
+        }
+      }
+    }
+
+    .sidebar_right-bottom-center {
+      display: flex;
+      gap: $box-gap;
+      width: 100%;
+      flex-direction: column;
+      .single {
+        width: 70%;
+      }
+      .container_element {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        gap: $box-gap;
+
+        .container_element_double {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .left {
+            width: 2rem;
+            height: 2rem;
+          }
+          .right {
+            width: 60%;
+            height: 2rem;
+          }
+        }
+      }
+    }
+    .sidebar_right-bottom {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      align-items: end;
+
+      .foot {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
